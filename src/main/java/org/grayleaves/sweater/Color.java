@@ -7,7 +7,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 
-@Path("/v1.1/color")
+@Path("/v1/color")
 public class Color {
 
 	@GET
