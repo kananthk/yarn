@@ -31,16 +31,16 @@ public class HealthTest extends EnvironmentTest {
 		newenv.put(HealthResponse.INSTANCE_KEY, "1");
 		setEnv(newenv); 
 		ApiV1App.determineInstance();
-	}
+}
 	
 	@Test
 	public void healthReturnsStatusUp() {
-		HealthResponse healthResponse = target("v1.1/health").request().get(HealthResponse.class);  
+		HealthResponse healthResponse = target("v1/health").request().get(HealthResponse.class);  
 		assertEquals("UP", healthResponse.getStatus()); 
 	}
 	@Test
 	public void healthReturnsInstanceNumber() {
-		HealthResponse healthResponse = target("v1.1/health").request().get(HealthResponse.class);  
+		HealthResponse healthResponse = target("v1/health").request().get(HealthResponse.class);  
 		assertEquals("1", healthResponse.getCfInstanceIndex()); 
 	}
 	@Override
