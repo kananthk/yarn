@@ -6,7 +6,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 
-@Path("/v1.1/health")
+@Path("/v1/health")
 public class Health {
 
 	@GET
