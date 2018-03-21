@@ -41,5 +41,15 @@ public class SimpleYarnStash implements YarnStash {
 		return yards; 
 	}
 
+	
+	public int zero(YarnEnum color, int yards) {
+		Integer available = yarn.get(color);
+		if (available != null) {
+			yards = 0; 
+		}
+		yarn.put(color, yards); 
+		return yards; 
+	}
+
 
 }
