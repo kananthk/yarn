@@ -3,7 +3,7 @@ package org.grayleaves.sweater;
 import org.grayleaves.utility.Clock;
 
 class StatusResponse {
-		public static final String NAME = "sweater-sample"; 
+		public static String NAME = "yarn"; 
 		public static final String NORMAL = "normal"; 
 		public static final String EXCEPTION = "exception: oops!"; 
 		private static String RESPONSE = NORMAL; 
@@ -68,6 +68,6 @@ class StatusResponse {
 		public String getResponse() {
 			return RESPONSE;
 		}
-		public void setResponse(String response) {
+		public void setYarnResponse(String response) {
 		}
 	}
