@@ -7,17 +7,18 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 
-@Path("/v1/color")
-public class Color {
+@Path("/v1/add")
+public class Add {
 
 	@GET
-	@Path("{color}")
+	@Path("{yards}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public ControlResponse knit(@PathParam("color") String color) {
-		ControlResponse response = new ControlResponse(); 
-		response.setColor(color);
-		return  response; 
-
+	public YarnStatusResponse add(@PathParam("yards") int yards) {
+		YarnStatusResponse yarnResponse = new YarnStatusResponse(); 
+		yarnResponse.add(yards);
+		yarnResponse.delay();
+		System.out.println("Status elapsed time: "+yarnResponse.getElapsedTime()+"; response: "+yarnResponse.getResponse()+"; adding: "+yarnResponse.getYarnResponse());
+		return yarnResponse;
 	}
 
 
