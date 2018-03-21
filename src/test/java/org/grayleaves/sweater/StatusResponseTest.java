@@ -22,7 +22,7 @@ public class StatusResponseTest {
 	public void defaultsToNormalResponseWithNameAndNoDelay() {
 		status = new StatusResponse(); 
 		assertEquals(0, status.getDelay());
-		assertEquals("sweater-sample", status.getName());
+		assertEquals("yarn", status.getName());
 		assertEquals("normal", status.getResponse());
 	}
 	@Test
