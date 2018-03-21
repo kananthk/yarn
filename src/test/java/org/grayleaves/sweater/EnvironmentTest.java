@@ -4,18 +4,10 @@ import java.lang.reflect.Field;
 import java.util.Collections;
 import java.util.Map;
 
-import javax.ws.rs.core.Application;
-
 import org.glassfish.jersey.test.JerseyTest;
 
-public abstract  class EnvironmentTest extends JerseyTest {
+public  class EnvironmentTest extends JerseyTest {
 
-	@Override
-	protected Application configure() {
-		return new Application();
-	}
-
-	
 	protected static void setEnv(Map<String, String> newenv) {
 	  try
 	    {
