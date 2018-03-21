@@ -48,10 +48,10 @@ public class ControlResponse {
 	}
 
 	public void setColor(String color) {
-		KnitStatusResponse.forceColor(color); 
+		YarnStatusResponse.forceColor(color); 
 		setCommand("setColor"); 
 	}
 	public String getColor() {
-		return KnitStatusResponse.COLOR.toString(); 
+		return YarnStatusResponse.COLOR.toString(); 
 	}
 }
