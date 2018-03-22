@@ -13,9 +13,9 @@ public class Zero {
 	@GET
 	@Path("{yards}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public YarnStatusResponse add(@PathParam("yards") int yards) {
+	public YarnStatusResponse zero() {
 		YarnStatusResponse yarnResponse = new YarnStatusResponse(); 
-		yarnResponse.zero(yards);
+		yarnResponse.zero();
 		yarnResponse.delay();
 		System.out.println("Status elapsed time: "+yarnResponse.getElapsedTime()+"; response: "+yarnResponse.getResponse()+"; resetting: "+yarnResponse.getYarnResponse());
 		return yarnResponse;
