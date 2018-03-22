@@ -53,11 +53,10 @@ public class YarnStatusResponse extends StatusResponse {
 		return added;  
 	}
 	
-	public int zero(int yards) {
-		int added = YARN_SERVICE.add(COLOR, yards);
-		int total = added - added ;
-		yarnResponse = yards+" yards "+COLOR+" is resetted to ; "+total+" yards total";
-		return   total ;
+	public int zero() {
+		int used = 0 ;
+		yarnResponse = COLOR+" is resetted ,  total availabe" +used;
+		return   used ;
 	}
 
 	public int getUsed() {
